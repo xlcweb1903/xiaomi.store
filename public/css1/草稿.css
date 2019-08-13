@@ -1,0 +1,43 @@
+.li1:hover .li-hidden,.li2:hover .li-hidden,.li3:hover .li-hidden,.li4:hover .li-hidden,.li5:hover .li-hidden,.li6:hover .li-hidden,.li7:hover .li-hidden,.li8:hover .li-hidden{
+    display:block;
+    border-top:  1.5px solid gray;
+}
+
+
+
+.li1:hover .floor1-part1{
+    display:block;
+}
+.li2:hover .floor1-part2{
+    display:block;
+}
+.li3:hover .floor1-part3{
+    display:block;
+}
+.li4:hover .floor1-part4{
+    display:block;
+}
+.li5:hover .floor1-part5{
+    display:block;
+}
+.li6:hover .floor1-part6{
+    display:block;
+}
+.li7:hover .floor1-part7{
+    display:block;
+}
+.li8:hover .floor1-part8{
+    display:block;
+}
+.li9:hover .floor1-part9{
+    display:block;
+}
+.li10:hover .floor1-part10{
+    display:block;
+}
+
+
+hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translate3d(0, -5px, 0);
+    z-index: 3;}

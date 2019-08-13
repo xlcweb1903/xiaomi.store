@@ -1,0 +1,46 @@
+a{
+    text-decoration: none;
+    color:#000000;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.clear-both{
+    clear: both;
+}
+
+.small-font{
+    font-size:14px;
+    color: #B0B0B0;
+}
+.middle-font{
+    font-size:18px;
+}
+.big-font{
+    font-size: 24px;
+}
+hr{
+    margin:15px 0 15px;
+}
+.bg-color{
+    background-color: #F5F5F5;
+}
+.f-right{
+    float: right;
+}
+.price{
+    text-align: center;
+    color:#ff6700;
+    font-size: 14px;
+    margin-top:10px;
+}
+.xiaomi-color{
+    color:#ff6700;
+}
+ul{
+    list-style: none;
+}
+a:hover{
+    color:#ff6700;
+}
+

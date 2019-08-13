@@ -1,0 +1,124 @@
+.details{
+    /* height:1633px; */
+    width: 1226px;
+    margin:auto;
+}
+.active{
+    border:1px solid #ff6700 !important;
+}
+#app:after{
+    display: block;
+    content:"";
+    clear:both;
+}
+.details>div:first-child{
+    width:100%;height:60px;
+}
+.details>div>ul>li:last-child{
+    float:right;
+}
+.details>div>ul>li:first-child{
+    display: inline-block;
+}
+.floor2>img{
+    width:560px;
+    position: absolute;
+}
+.floor2>div{
+    width: 610px;
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+}
+.floor2>div>p{
+    margin:15px 0 15px;
+}
+.zengping{
+    display: inline-block;
+    width:80px;height:25px;
+    margin-top:10px;
+    background: #ff6700;
+    color:#fff;
+    text-align: center;
+}
+.split{
+    margin:0 10px 0;
+}
+#location{
+    widows: 606px;height:104px;
+    background:#FAFAFA;
+    padding-left: 15px;
+
+}
+#location>span{
+    display: inline-block;
+    margin-top:27px;
+}
+.select-type>a{
+    display: inline-block;
+    width:276px;height:42px;
+    border:1px solid  #ddd;
+    background:#fff;
+    color: #000;
+    line-height: 42px;
+    margin:10px 5px 10px;
+}
+.select-type>a>span{
+    margin:0 10px;
+}
+label{
+    display: block;
+    height:100px;
+    width: 530px;
+    margin:20px 0px 25px ;
+    border:1px solid #ddd;
+    padding:30px 10px 0px;
+}
+label>div{
+    display: inline-block;
+    float: left;
+}
+.m-l{
+margin-left:200px;
+ }
+ .mi-bao{
+     margin:0 25px 0;
+ }
+ .m-b{
+     display: inline-block;
+     margin-bottom: 10px;
+ }
+ .f-r{
+     float: right;
+ }
+.mi-click .bao-price{
+   margin-left: 100px;
+}
+ .total{
+    width:525px;height:120px;
+    background: rgb(222, 222, 228);
+    padding:25px 15px 0;
+ }
+ .shop{
+     display: inline-block;
+     width: 300px;height:54px;
+     background: #ff6700;
+     line-height:54px; 
+     text-align: center;
+     color:#fff;
+     margin:20px 70px 10px 0;
+     cursor: pointer;
+ }
+ .shop:hover{
+     color:#fff;
+ }
+ .i-like{
+     display:inline-block;
+     width: 142px;height:54px;
+     line-height:54px; 
+     background: #b0b0b0;
+     color:#fff
+ }
+ /* .floor2>img{
+     margin-top:1046px;
+ } */

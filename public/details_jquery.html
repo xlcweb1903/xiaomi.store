@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+</head>
+<title>商品详情页</title>
+<link rel="stylesheet" href="css1/header.css">
+<link rel="stylesheet" href="css1/footer.css">
+<link rel="stylesheet" href="css1/common.css">
+<link rel="stylesheet" href="css1/detail.css">
+<style>
+   
+</style>
+<body>
+    <header></header>
+    <div class="details" id="app">
+        <div class="floor1">
+            <ul>
+                <li><span class="middle-font jname"></span><span class="split">|</span>
+                    <a href="javascript:;">小米9 SE</a><span class="split">|</span>
+                    <a href="javascript:;">小米9 透明尊享版</a></li>
+                <li>
+                    <a href="javascript:;">概述</a><span class="split">|</span>
+                    <a href="javascript:;">参数</a><span class="split">|</span>
+                    <a href="javascript:;">F码通道</a><span class="split">|</span>
+                    <a href="javascript:;">用户评价</a>
+                </li>
+            </ul>
+        </div>
+        <div class="floor2">
+            <table></table>
+            <img src="" alt="" class="jpicture">
+            <div>
+               <p class="big-font m-x jname"></p>
+               <p class="small-font" ><span class="xiaomi-color jdetail0"></span>
+                   <span class="jdetail1"></span>
+                 </p> 
+                <p class="small-font xiaomi-color">小米自营</p>
+                <p class="middle-font xiaomi-color jprice"></p>
+                <hr>
+                <span class="zengping small-font">赠品</span>
+                <span class="small-font">赠小米无限充电宝</span><br>
+                <span class="zengping small-font">赠品</span>
+                <span class="small-font">赠米粉卡</span>
+                <hr>
+                <div id="location">
+                    <span class="small-font">湖北省 武汉市 洪山区 雄楚大道</span>
+                    <button>修改</button>
+                    <p class="xiaomi-color">有现货</p>
+                </div>
+                <div class="select-type1 select-type">
+                    <p class="middle-font">选择版本</p>
+                </div>
+                <div class="select-type2 select-type">
+                    <p class="middle-font">选择颜色</p>
+                </div>
+                <div class="select-type3 select-type" >
+                    <p class="middle-font">选择版本</p>
+                </div>
+                <div class="mi-click">
+                    <div>
+                        <span class="middle-font">选择小米提供的延长保修</span>
+                        <a href="javascript:;" class="-right xiaomi-color">了解延长保修></a><br>
+                        <label for="xiaomi1-bao">
+                            <div>
+                                <input type="checkbox" id="xiaomi1-bao" value="99">
+                                <img class="mi-bao" src="detail.img/bao.jpg" alt="" >
+                            </div>
+                            <div>
+                                <span class="m-b">延长保修服务</span><br>
+                                <span class="m-b">厂保延一年，性能故障免费维修</span><br>
+                                <input type="checkbox">我已阅读&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="javascript:;" class="xiaomi-color">服务条款</a>
+                                <span class="split">|</span><a href="javascript:;" class="xiaomi-color"> 常见问题</a>
+                                <span class="bao-price">99元</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <span class="middle-font">选择小米提供的意外保护</span><a href="javascript:;" class="m-l xiaomi-color">了解意外保护></a><br>
+                        <label for="xiaomi-bao">
+                            <div><input type="checkbox" id="xiaomi-bao" value="299">
+                                <img class="mi-bao" src="detail.img/bao.jpg" alt="" >
+                            </div>
+                            <div>
+                                <span class="m-b">意外保障服务</span><br>
+                                <span class="m-b">手机意外碎屏/进水/碾压等损坏</span><br>
+                                <input type="checkbox">我已阅读&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="javascript:;" class="xiaomi-color">服务条款</a>
+                                <span class="split">|</span><a href="javascript:;" class="xiaomi-color"> 常见问题</a>
+                                <span class="bao-price">299元</span>
+                            </div>
+                        </label>
+                    </div> 
+                    <div>   
+                        <label for="suiping-bao">
+                            <div><input type="checkbox" id="suiping-bao" value="199">
+                                <img class="mi-bao" src="detail.img/bao.jpg" alt="" >
+                            </div>
+                            <div>
+                                <span class="m-b">延长保修服务</span><br>
+                                <span class="m-b">厂保延一年，性能故障免费维修</span><br>
+                                <input type="checkbox">我已阅读&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="javascript:;" class="xiaomi-color">服务条款</a>
+                                <span class="split">|</span><a href="javascript:;" class="xiaomi-color"> 常见问题</a>
+                                <span class="bao-price">199元</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="total">
+                    <p><span class="small-font m-b">小米9 全网通版 6GB+128GB 全息幻彩紫</span><span class="small-font f-r">2999元</span></p>
+                    <p class="big-font m-b xiaomi-color total-price"></p>
+                </div>
+                <span class="shop middle-font">加入购物车</span><a href="javascript:;" class="i-like middle-font">❤喜欢</a>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="js1/jquery-1.11.3.js"></script>
+    <script src="js1/vue.js"></script>
+    <script src="js1/axios.min.js"></script>
+    <script src="js1/details_jquery.js"></script>
+    <script src="js1/header.js"></script>
+    <script src="js1/components.js"></script>
+</body>
+</html>

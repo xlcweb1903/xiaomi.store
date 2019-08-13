@@ -1,0 +1,122 @@
+    *{margin:0;padding:0;
+        font-size:0;
+    }
+    a{
+        text-decoration: none;
+        color:#000;
+    }
+    body{
+        width:1270px;
+        background: #BD193B 
+    }
+    /* 页头 */
+    .header{
+        width: 100%;
+        overflow: hidden;
+    }
+    .header>img,.pbody>img{
+        width:2560px;
+        margin-left:-667px;
+    }
+    .mi-logo{
+        width: 40px;
+        position: absolute;
+        left:20px;
+        top:25px;
+    }
+    .header>a:nth-child(5){
+        font-size: 14px;
+        position: absolute;
+        top:48px;right:20px;
+        color:#fff;
+    }
+    /* 商品列表 */
+    .floor1>div{
+        width:606px;height:492px;
+        margin:15px 0 0 15px;
+        float: left;
+        background:#fff;
+        position: relative;
+    }
+    .floor1>div>div{
+        padding:0 25px 25px 25px;
+    }
+    .floor1>div>div>img{
+        height: 358px;
+        margin-left:-25px;
+        margin-bottom: 25px;
+        background: #F5F5F5
+    }
+    .pname{
+        display: inline-block;
+        width:360px;height: 33px;
+        font-size: 22px;
+        line-height: 33px;
+    }
+    .pprice{
+        display: inline-block;
+        width: 160;height: 27px;
+        font-size: 24px;
+        padding-left:25px;
+        color:#EA625B;
+        margin-bottom:15px;
+    }
+    .pprice>em{
+        font-size: 14px;
+    }
+    .pdetail{
+        display: inline-block;
+        width:360px;height:20px;
+        font-size: 14px;
+        color:#666666;
+        line-height: 20px;
+    }
+    .btn{
+        display: inline-block;
+        width:160px;height:44px;
+        background: #EA625B;
+        color: #fff;
+        font-size: 18px;
+        line-height: 44px;
+        text-align: center;
+        border-radius: 3px;
+    }
+    .pseal{
+        display: inline-block;
+        width:90px;height:90px;
+        text-align: center;
+        line-height: 90px;
+        border-radius: 50%;
+        background:#EA625B;
+        color: #fff;
+        font-size: 14px;
+        position: absolute;
+        right:25px;bottom:155px;
+    }
+    .floor2{
+      width: 100%;
+      padding-left:15px;
+    }
+    .floor-top>div{
+      width: 1226px;
+      float: left;
+    }
+    .floor-top>div:first-child{
+      width:854px;
+    }
+    .floor-top>div>img{
+      width: 854px;height:434px;
+    }
+    .floor-top>div:last-child{
+      background:#fff;
+      width:372px;height:434px;
+    }
+    .floor-top>div>div{
+      padding:105px 0 0 35px;
+    }
+    .floor-top>div>div>.pprice{
+      padding-top:45px;
+    }
+    .floor2>.floor1>div{
+      margin: 15px 15px 0 0;
+    }

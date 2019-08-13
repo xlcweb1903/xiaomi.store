@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>小米商城-登录页面</title>
+  <link rel="stylesheet" href="css1/mi_login.css">
+ </head>
+ <body>
+    <div class="reg-top">
+        <img src="img/logo.png" alt="">
+        <div>
+          <a href="">小米商城</a> <br> <a href="">让每个人都能享受科技的乐趣</a>
+        </div>
+    </div>
+    <div id="body_center">
+      <div id="body_width">
+        <a href=""><img src="img/login.jpg" alt=""></a>
+        <div class="user-login">
+          <p>账号登录</p>
+          <div>
+            <input type="text" id='userphone' placeholder='手机号码'><br>
+            <span></span>
+            <input type="password" id='upwd' placeholder='请输入密码'><br>
+            <span></span>
+            <button onclick='content()' id='b1'>登录</button>
+            <ul>
+              <li> <a href="mi_reg.html">手机短信/注册</a> </li>
+              <li><a href="mi_reg.html" target="_blank" onclick="content()">立即注册</a> <span>|</span> <a href="">忘记密码？</a></li>
+            </ul>
+            <p>———————其他登录方式————————</p>
+            <img src="img/reg_style.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="login-footer">
+      <a href="">简体</a><span>|</span>
+      <a href="">繁体</a><span>|</span>
+      <a href="">English</a><span>|</span>
+      <a href="">常见问题</a><br>
+      <span>小米公司版权所有-京ICP备10046444-<img src="img/reg.png" alt="">京公网安备11010802020134号-京ICP证110507号</p>
+      </span>
+    </div>
+    <script src="js1/jquery-1.11.3.js"></script>
+    <script src="js1/axios.min.js"></script> 
+   <script>
+      function content(){
+       //获取用户名和密码
+       var user_phone=userphone.value;
+       var u_pwd=upwd.value;
+       axios.get("http://127.0.0.1:8080/pro/login",{params:{user_phone,u_pwd}}).then((res)=>{
+         if(res.data==1){
+           confirm("登陆成功！");
+           sessionStorage.setItem("name",user_phone);
+           
+           location.href="index.html";
+         }else{
+           alert("登录失败")
+         }
+       })
+      }
+   </script>
+ </body>
+</html>

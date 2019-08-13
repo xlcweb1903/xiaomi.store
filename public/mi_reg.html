@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>小米账号-注册</title>
+  <link rel="stylesheet" href="css1/mi_reg.css">
+ </head>
+ <body>
+    <div class="user-reg">
+       <img src="img/logo.png" alt=""> 
+       <p>注册小米账号</p>
+       <ul>
+           <li>国家/地区</li>
+           <li>
+             <select name="中" id="">
+             <option value="">A</option>
+             <option value="">Andorra</option>
+             <option value="">Afghanistan</option>
+             <option value="">Antigua and Barbuda</option>
+             <option value="">Anguilla</option>
+             <option value="">B</option>
+             <option value="">Bosnia and Herzegovina</option>
+             <option value="">Barbados</option>
+             <option value="">Bangladesh</option>
+             <option value="">Belgium</option>
+             <option value="" selected="true">中国</option>
+           </select>
+          </li>
+           <li><p>成功注册帐号后，国家/地区将不能被修改</p></li>
+           <li>手机号码</li>
+           <li>
+            <select name="" id="">
+              <option value="">A</option>
+              <option value="">Andorra</option>
+              <option value="">Afghanistan</option>
+              <option value="">Antigua and Barbuda</option>
+              <option value="">Anguilla</option>
+              <option value="">B</option>
+              <option value="">Bosnia and Herzegovina</option>
+              <option value="">Barbados</option>
+              <option value="">Bangladesh</option>
+              <option value="">Belgium</option>
+              <option value="" selected="true">+86</option>
+            </select>
+           <input type="text" placeholder="请输入手机号码" id="phoneNumber" onblur="test()"></li>
+           <li id="danger"></li>
+           <input type="text" placeholder="请输入用户名" id="miUname">
+           <input type="password" placeholder="请输入密码" id="miUpwd">
+           <li id="warnning">用户名6-10位;密码8-12位,可包含下划线</li>
+           <li><button onclick="reg()" id="btn">注册</button></li>
+       </ul>
+       <div>
+           <input type="checkbox" id="my-checkbox">
+           <label for="my-checkbox">
+                <span>注册帐号即表示您同意并愿意遵守小米
+                    <a>用户协议</a>和<a>隐私政策</a></span>
+           </label>
+       </div>
+    </div>
+    <div><a href="">简体</a><span>|</span>
+        <a href="">繁体</a><span>|</span>
+        <a href="">English</a><span>|</span>
+        <a href="">常见问题</a>
+    </div>
+    <p>小米公司版权所有-京ICP备10046444-<img src="img/reg.png" alt="">京公网安备11010802020134号-京ICP证110507号</p>
+    <script src="js1/jquery-1.11.3.js"></script>
+    <script src="js1/axios.min.js"></script>
+  <script>
+      //查询用户名是否被注册
+      
+      function test(){
+        var user_phone=phoneNumber.value;
+        var reg_phone=/^1[3-8]\d{9}$/i;
+        console.log(reg_phone.test(user_phone));
+        if(reg_phone.test(user_phone)==false){
+          danger.innerHTML="<h3 style='color:red'>手机号码格式错误！</h3>";
+          miUname.disabled=true;miUpwd.disabled=true;btn.disabled=true;
+        }else{
+          axios.get("http://127.0.0.1:8080/pro/user_phone",{
+            params:{
+            user_phone:user_phone
+          }
+        }).then((res)=>{
+          console.log(res.data);
+          //你要的数据: res.data
+          if(res.data==0){
+            //注册
+            danger.innerHTML="<h3 style='color:green'>允许注册</h3>";
+            miUname.disabled=false;miUpwd.disabled=false;btn.disabled=false;
+            // axios.post()
+          }else{
+            danger.innerHTML="<h3 style='color:red'>该用户已经被注册</h3>";
+            miUname.disabled=true;miUpwd.disabled=true;btn.disabled=true;
+          }
+        })
+      }
+    }
+    function reg(){
+      var user_phone=phoneNumber.value;
+      var user_pwd=miUpwd.value;
+      var user_name=miUname.value;
+      var regUname=/^[0-9a-zA-Z_]{6,10}$/i;
+      var regUpwd=/^[0-9a-z]{8,12}$/i;
+      // console.log(u_name,u_pwd);
+      if(regUname.test(user_name)&&regUpwd.test(user_pwd)){
+          axios.post("http://127.0.0.1:8080/pro/reg",`uname=${user_name}&upwd=${user_pwd}&phone=${user_phone}`,
+          ).then((res)=>{
+            if(res.data==1){
+              confirm("注册成功！");
+              location.href="mi_login.html"
+            }
+          })
+        }else{
+          warnning.innerHTML="<h3 style='color:red'>该用户和密码不可用</h3>";
+        }
+      }
+  </script>
+ 
+ </body>
+</html>
